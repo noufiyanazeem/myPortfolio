@@ -61,7 +61,7 @@ export default function Hero() {
             className="mb-6"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark-800 dark:text-white mb-4">
-              Noufiya Nazeem
+             Pro Noufiya Nazeem
             </h1>
             <p className="text-xl sm:text-2xl text-dark-600 dark:text-dark-300 font-medium">
               Software Developer & AI Specialist
