@@ -14,64 +14,67 @@ import {
 
 const skillCategories = [
   {
-    title: 'Frontend Development',
-    icon: Globe,
+    title: 'Programming Languages',
+    icon: Code,
     skills: [
-      { name: 'React', level: 95, color: 'from-blue-400 to-blue-600' },
-      { name: 'JavaScript', level: 90, color: 'from-yellow-400 to-yellow-600' },
-      { name: 'TypeScript', level: 85, color: 'from-blue-500 to-blue-700' },
-      { name: 'TailwindCSS', level: 90, color: 'from-cyan-400 to-cyan-600' },
-      { name: 'HTML/CSS', level: 95, color: 'from-orange-400 to-orange-600' }
+      { name: 'Python', level: 90, color: 'from-blue-400 to-blue-600' },
+      { name: 'SQL', level: 85, color: 'from-green-400 to-green-600' },
+      { name: 'Bash', level: 75, color: 'from-gray-400 to-gray-600' },
+      { name: 'C/C++', level: 70, color: 'from-blue-500 to-blue-700' },
+      { name: 'HTML/CSS', level: 85, color: 'from-orange-500 to-orange-700' },
+      { name: 'React', level: 65, color: 'from-blue-400 to-blue-600' }
     ]
   },
   {
-    title: 'Backend & Database',
-    icon: Server,
+    title: 'AI & Technologies',
+    icon: Brain,
     skills: [
       { name: 'Node.js', level: 88, color: 'from-green-400 to-green-600' },
       { name: 'Python', level: 85, color: 'from-blue-500 to-blue-700' },
-      { name: 'MongoDB', level: 80, color: 'from-green-500 to-green-700' },
-      { name: 'PostgreSQL', level: 75, color: 'from-blue-600 to-blue-800' },
-      { name: 'Firebase', level: 85, color: 'from-orange-400 to-orange-600' }
+      { name: 'AI & Chatbot Technologies', level: 88, color: 'from-purple-400 to-purple-600' },
+      { name: 'Firebase AI Studio', level: 90, color: 'from-orange-400 to-orange-600' },
+      { name: 'Power BI', level: 85, color: 'from-yellow-400 to-yellow-600' },
+      { name: 'Cloud Computing', level: 80, color: 'from-blue-500 to-blue-700' },
+      { name: 'Machine Learning', level: 82, color: 'from-green-500 to-green-700' },
+      { name: 'LLM', level: 85, color: 'from-pink-400 to-pink-600' }
     ]
   },
   {
-    title: 'AI & Machine Learning',
-    icon: Brain,
+    title: 'Database & Tools',
+    icon: Database,
     skills: [
-      { name: 'LangChain', level: 90, color: 'from-purple-400 to-purple-600' },
-      { name: 'OpenAI API', level: 88, color: 'from-green-500 to-green-700' },
-      { name: 'TensorFlow', level: 75, color: 'from-orange-500 to-orange-700' },
-      { name: 'Python ML', level: 80, color: 'from-blue-400 to-blue-600' },
-      { name: 'NLP', level: 85, color: 'from-pink-400 to-pink-600' }
+      { name: 'Supabase', level: 88, color: 'from-green-400 to-green-600' },
+      { name: 'MySQL', level: 85, color: 'from-blue-500 to-blue-700' },
+      { name: 'Git', level: 90, color: 'from-orange-500 to-orange-700' },
+      { name: 'Visual Studio Code', level: 95, color: 'from-blue-400 to-blue-600' },
+      { name: 'Eclipse', level: 80, color: 'from-purple-400 to-purple-600' },
+      { name: 'PyCharm', level: 85, color: 'from-green-500 to-green-700' }
     ]
   },
   {
-    title: 'Tools & Platforms',
+    title: 'Frameworks & Platforms',
     icon: Zap,
     skills: [
-      { name: 'n8n', level: 90, color: 'from-purple-500 to-purple-700' },
-      { name: 'Git', level: 92, color: 'from-orange-500 to-orange-700' },
-      { name: 'Docker', level: 70, color: 'from-blue-500 to-blue-700' },
-      { name: 'AWS', level: 75, color: 'from-yellow-500 to-yellow-700' },
-      { name: 'Vercel', level: 85, color: 'from-black to-gray-600' }
+      { name: 'Pygame', level: 80, color: 'from-blue-400 to-blue-600' },
+      { name: 'Tkinter', level: 75, color: 'from-green-400 to-green-600' },
+      { name: 'NumPy', level: 82, color: 'from-blue-500 to-blue-700' }
     ]
   }
 ]
 
 const techIcons = [
-  { name: 'React', icon: '⚛️', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
   { name: 'Python', icon: '🐍', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
-  { name: 'AI/ML', icon: '🤖', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
-  { name: 'LangChain', icon: '🔗', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'Firebase', icon: '🔥', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
+  { name: 'SQL', icon: '🗄️', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
+  { name: 'Power BI', icon: '📊', color: 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-400' },
+  { name: 'Firebase AI', icon: '🔥', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'Supabase', icon: '⚡', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'n8n', icon: '⚙️', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
-  { name: 'Node.js', icon: '🟢', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'TypeScript', icon: '📘', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
-  { name: 'TailwindCSS', icon: '🎨', color: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400' },
-  { name: 'MongoDB', icon: '🍃', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'Docker', icon: '🐳', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' }
+  { name: 'Pabbly', icon: '🔗', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
+  { name: 'Git', icon: '📝', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
+  { name: 'VS Code', icon: '💻', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
+  { name: 'Pygame', icon: '🎮', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
+  { name: 'NumPy', icon: '📈', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
+  { name: 'AI/ML', icon: '🤖', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
+  { name: 'Cloud', icon: '☁️', color: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400' }
 ]
 
 export default function Skills() {

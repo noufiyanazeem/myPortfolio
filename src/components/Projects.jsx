@@ -5,73 +5,43 @@ import { ExternalLink, Github, Eye } from 'lucide-react'
 const projects = [
   {
     id: 1,
-    title: 'AI-Powered Chat Assistant',
-    description: 'An intelligent chatbot built with LangChain and OpenAI, featuring natural language processing and context-aware responses.',
+    title: 'HR Analytics Dashboard',
+    description: 'Designed and developed a fully interactive HR Analytics Dashboard to visualize and analyze key human resource metrics, providing insights into attrition, employee demographics, and workforce structure. Tracked and visualized employee records with real-time KPIs such as Attrition Count and Rate, Average Age, Salary, and Tenure.',
     image: '/api/placeholder/400/250',
-    category: 'AI',
-    tech: ['React', 'LangChain', 'OpenAI', 'Node.js'],
+    category: 'Data Analytics',
+    tech: ['Power BI', 'Excel', 'Data Modeling', 'DAX Measures'],
     liveUrl: '#',
     githubUrl: '#',
-    featured: true
+    featured: true,
+    period: '01/2024 - 03/2025'
   },
   {
     id: 2,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with advanced features like real-time inventory, payment processing, and admin dashboard.',
+    title: 'Two Player Games',
+    description: 'Two-Player Games is an interactive and dynamic collection of classic two-player games implemented in the Python programming language. The primary aim is to provide users with an engaging and enjoyable gaming experience while demonstrating the versatility and power of Python in game development.',
     image: '/api/placeholder/400/250',
-    category: 'Web Apps',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    category: 'Game Development',
+    tech: ['Python', 'Pygame Library', 'Game Development'],
     liveUrl: '#',
     githubUrl: '#',
-    featured: true
+    featured: true,
+    period: '04/2024 - 08/2024'
   },
   {
     id: 3,
-    title: 'Workflow Automation System',
-    description: 'Automated business processes using n8n workflows, reducing manual tasks by 80% and improving efficiency.',
+    title: 'Tourism Web Platform',
+    description: 'Designed, developed, and deployed a responsive tourism web platform featuring interactive UI cards, wishlist, cart, and booking functionalities. Integrated Pabbly\'s Whatsapp API to automate user confirmations for bookings via WhatsApp.',
     image: '/api/placeholder/400/250',
-    category: 'Automation',
-    tech: ['n8n', 'JavaScript', 'API Integration', 'Webhooks'],
+    category: 'Web Development',
+    tech: ['Next.js', 'Supabase', 'Pabbly API', 'Firebase AI Studio'],
     liveUrl: '#',
     githubUrl: '#',
-    featured: true
-  },
-  {
-    id: 4,
-    title: 'Smart Data Analytics Dashboard',
-    description: 'Real-time data visualization dashboard with AI-powered insights and predictive analytics.',
-    image: '/api/placeholder/400/250',
-    category: 'AI',
-    tech: ['React', 'Python', 'TensorFlow', 'D3.js'],
-    liveUrl: '#',
-    githubUrl: '#',
-    featured: false
-  },
-  {
-    id: 5,
-    title: 'Task Management App',
-    description: 'Collaborative task management application with real-time updates, team collaboration, and progress tracking.',
-    image: '/api/placeholder/400/250',
-    category: 'Web Apps',
-    tech: ['React', 'Firebase', 'TailwindCSS', 'Framer Motion'],
-    liveUrl: '#',
-    githubUrl: '#',
-    featured: false
-  },
-  {
-    id: 6,
-    title: 'Email Marketing Automation',
-    description: 'Automated email marketing system with personalized content generation and campaign optimization.',
-    image: '/api/placeholder/400/250',
-    category: 'Automation',
-    tech: ['Python', 'AI/ML', 'Email APIs', 'Analytics'],
-    liveUrl: '#',
-    githubUrl: '#',
-    featured: false
+    featured: true,
+    period: '04/2023 - Present'
   }
 ]
 
-const categories = ['All', 'AI', 'Web Apps', 'Automation']
+const categories = ['All', 'Data Analytics', 'Game Development', 'Web Development']
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
@@ -184,11 +154,16 @@ export default function Projects() {
                     <span className="text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/50 px-3 py-1 rounded-full">
                       {project.category}
                     </span>
-                    {project.featured && (
-                      <span className="text-xs font-medium text-yellow-600 bg-yellow-100 dark:bg-yellow-900/50 px-2 py-1 rounded-full">
-                        Featured
+                    <div className="flex items-center gap-2">
+                      {project.featured && (
+                        <span className="text-xs font-medium text-yellow-600 bg-yellow-100 dark:bg-yellow-900/50 px-2 py-1 rounded-full">
+                          Featured
+                        </span>
+                      )}
+                      <span className="text-xs text-dark-500 dark:text-dark-400">
+                        {project.period}
                       </span>
-                    )}
+                    </div>
                   </div>
                   
                   <h3 className="text-xl font-bold text-dark-800 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200">

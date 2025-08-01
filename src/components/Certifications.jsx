@@ -5,57 +5,39 @@ import { Award, ExternalLink, X, Eye } from 'lucide-react'
 const certifications = [
   {
     id: 1,
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    year: '2024',
+    title: 'Data Analytics',
+    issuer: 'Codtech IT Solutions',
+    year: '2024-2025',
     image: '/api/placeholder/400/300',
-    credentialId: 'AWS-123456',
-    description: 'Demonstrates expertise in designing distributed systems on AWS platform.'
+    credentialId: 'DATA-ANALYTICS-2024',
+    description: 'Comprehensive data analytics certification covering data visualization, statistical analysis, and business intelligence tools.'
   },
   {
     id: 2,
-    title: 'Google Cloud Professional Developer',
-    issuer: 'Google Cloud',
-    year: '2023',
+    title: 'SQL Certification Course: Basic to Advance',
+    issuer: 'Geekster',
+    year: '2024',
     image: '/api/placeholder/400/300',
-    credentialId: 'GCP-789012',
-    description: 'Validates skills in developing and deploying applications on Google Cloud Platform.'
+    credentialId: 'SQL-GEEKSTER-2024',
+    description: 'Complete SQL certification from basic concepts to advanced database management and optimization techniques.'
   },
   {
     id: 3,
-    title: 'Microsoft Azure Developer Associate',
-    issuer: 'Microsoft',
-    year: '2023',
+    title: 'Python Programming Fundamentals',
+    issuer: 'Geekster',
+    year: '2024',
     image: '/api/placeholder/400/300',
-    credentialId: 'AZURE-345678',
-    description: 'Certifies ability to design, build, test, and maintain cloud applications.'
+    credentialId: 'PYTHON-GEEKSTER-2024',
+    description: 'Fundamental Python programming certification covering core concepts, data structures, and programming best practices.'
   },
   {
     id: 4,
-    title: 'Certified Kubernetes Administrator',
-    issuer: 'Cloud Native Computing Foundation',
-    year: '2023',
+    title: 'Introduction to Simple Data Structures in Python',
+    issuer: 'Codesignal',
+    year: '2024',
     image: '/api/placeholder/400/300',
-    credentialId: 'CKA-901234',
-    description: 'Validates skills in managing Kubernetes clusters and applications.'
-  },
-  {
-    id: 5,
-    title: 'TensorFlow Developer Certificate',
-    issuer: 'Google',
-    year: '2023',
-    image: '/api/placeholder/400/300',
-    credentialId: 'TF-567890',
-    description: 'Demonstrates proficiency in building and training machine learning models.'
-  },
-  {
-    id: 6,
-    title: 'React Developer Certification',
-    issuer: 'Meta',
-    year: '2023',
-    image: '/api/placeholder/400/300',
-    credentialId: 'REACT-123789',
-    description: 'Validates expertise in building modern web applications with React.'
+    credentialId: 'PYTHON-DS-CODESIGNAL-2024',
+    description: 'Specialized certification in Python data structures including arrays, linked lists, stacks, queues, and trees.'
   }
 ]
 

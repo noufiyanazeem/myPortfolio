@@ -1,24 +1,24 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, Github, Linkedin, Send, CheckCircle, AlertCircle, Download } from 'lucide-react'
 import { AnimatePresence } from 'framer-motion'
 
 const socialLinks = [
   {
     name: 'GitHub',
-    url: 'https://github.com/noufiya',
+    url: 'https://github.com/noufiyanazeem',
     icon: Github,
     color: 'hover:text-gray-800 dark:hover:text-white'
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/noufiya',
+    url: 'https://linkedin.com/in/noufiyanazeem',
     icon: Linkedin,
     color: 'hover:text-blue-600 dark:hover:text-blue-400'
   },
   {
     name: 'Email',
-    url: 'mailto:noufiya@example.com',
+    url: 'mailto:noufnoufiyanazeem@gmail.com',
     icon: Mail,
     color: 'hover:text-red-600 dark:hover:text-red-400'
   }
@@ -153,7 +153,55 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-dark-500 dark:text-dark-400">Email</p>
-                  <p className="text-dark-700 dark:text-white font-medium">noufiya@example.com</p>
+                  <a href="mailto:noufnoufiyanazeem@gmail.com" className="text-dark-700 dark:text-white font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    noufnoufiyanazeem@gmail.com
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm text-dark-500 dark:text-dark-400">Location</p>
+                  <p className="text-dark-700 dark:text-white font-medium">Dubai, UAE</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm text-dark-500 dark:text-dark-400">Phone</p>
+                  <a href="tel:+971561223698" className="text-dark-700 dark:text-white font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    +971 56 122 3698
+                  </a>
+                </div>
+              </div>
+              
+              {/* Resume Download */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center">
+                  <Download className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-dark-500 dark:text-dark-400">Resume</p>
+                  <a 
+                    href="/NoufiyaNazeem.pdf" 
+                    download="NoufiyaNazeem-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-dark-700 dark:text-white font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    Download PDF Resume
+                  </a>
                 </div>
               </div>
             </div>
