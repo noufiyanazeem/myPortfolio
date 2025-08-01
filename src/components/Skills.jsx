@@ -19,24 +19,33 @@ const skillCategories = [
     skills: [
       { name: 'Python', level: 90, color: 'from-blue-400 to-blue-600' },
       { name: 'SQL', level: 85, color: 'from-green-400 to-green-600' },
-      { name: 'Bash', level: 75, color: 'from-gray-400 to-gray-600' },
-      { name: 'C/C++', level: 70, color: 'from-blue-500 to-blue-700' },
-      { name: 'HTML/CSS', level: 85, color: 'from-orange-500 to-orange-700' },
-      { name: 'React', level: 65, color: 'from-blue-400 to-blue-600' }
+      { name: 'HTML', level: 85, color: 'from-orange-500 to-orange-700' },
+      { name: 'CSS', level: 85, color: 'from-blue-500 to-blue-700' }
     ]
   },
   {
     title: 'AI & Technologies',
     icon: Brain,
     skills: [
-      { name: 'Node.js', level: 88, color: 'from-green-400 to-green-600' },
-      { name: 'Python', level: 85, color: 'from-blue-500 to-blue-700' },
       { name: 'AI & Chatbot Technologies', level: 88, color: 'from-purple-400 to-purple-600' },
-      { name: 'Firebase AI Studio', level: 90, color: 'from-orange-400 to-orange-600' },
-      { name: 'Power BI', level: 85, color: 'from-yellow-400 to-yellow-600' },
-      { name: 'Cloud Computing', level: 80, color: 'from-blue-500 to-blue-700' },
       { name: 'Machine Learning', level: 82, color: 'from-green-500 to-green-700' },
-      { name: 'LLM', level: 85, color: 'from-pink-400 to-pink-600' }
+      { name: 'LLM Prompt Crafting', level: 85, color: 'from-pink-400 to-pink-600' },
+      { name: 'Neural Networks (Basics)', level: 75, color: 'from-blue-500 to-blue-700' },
+      { name: 'Data Modeling', level: 80, color: 'from-yellow-400 to-yellow-600' },
+      { name: 'Cloud Computing', level: 80, color: 'from-cyan-400 to-cyan-600' },
+      { name: 'Power BI', level: 85, color: 'from-orange-400 to-orange-600' },
+      { name: 'Data Cleaning & Transformation', level: 88, color: 'from-green-400 to-green-600' }
+    ]
+  },
+  {
+    title: 'Frameworks & Libraries',
+    icon: Zap,
+    skills: [
+      { name: 'Pygame', level: 80, color: 'from-blue-400 to-blue-600' },
+      { name: 'Tkinter', level: 75, color: 'from-green-400 to-green-600' },
+      { name: 'NumPy', level: 82, color: 'from-blue-500 to-blue-700' },
+      { name: 'Scikit-Learn', level: 78, color: 'from-orange-400 to-orange-600' },
+      { name: 'TensorFlow', level: 75, color: 'from-purple-400 to-purple-600' }
     ]
   },
   {
@@ -48,16 +57,21 @@ const skillCategories = [
       { name: 'Git', level: 90, color: 'from-orange-500 to-orange-700' },
       { name: 'Visual Studio Code', level: 95, color: 'from-blue-400 to-blue-600' },
       { name: 'Eclipse', level: 80, color: 'from-purple-400 to-purple-600' },
-      { name: 'PyCharm', level: 85, color: 'from-green-500 to-green-700' }
+      { name: 'PyCharm', level: 85, color: 'from-green-500 to-green-700' },
+      { name: 'MS Office', level: 85, color: 'from-red-400 to-red-600' },
+      { name: 'Adobe Photoshop', level: 75, color: 'from-pink-400 to-pink-600' }
     ]
   },
   {
-    title: 'Frameworks & Platforms',
-    icon: Zap,
+    title: 'Platforms & AI Tools',
+    icon: Cloud,
     skills: [
-      { name: 'Pygame', level: 80, color: 'from-blue-400 to-blue-600' },
-      { name: 'Tkinter', level: 75, color: 'from-green-400 to-green-600' },
-      { name: 'NumPy', level: 82, color: 'from-blue-500 to-blue-700' }
+      { name: 'Firebase AI Studio', level: 90, color: 'from-orange-400 to-orange-600' },
+      { name: 'Supabase', level: 88, color: 'from-green-500 to-green-700' },
+      { name: 'Cursor AI', level: 85, color: 'from-blue-400 to-blue-600' },
+      { name: 'Trae AI', level: 80, color: 'from-purple-400 to-purple-600' },
+      { name: 'Google AI Studio', level: 82, color: 'from-yellow-400 to-yellow-600' },
+      { name: 'Pabbly', level: 85, color: 'from-red-400 to-red-600' }
     ]
   }
 ]
@@ -65,6 +79,7 @@ const skillCategories = [
 const techIcons = [
   { name: 'Python', icon: '🐍', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
   { name: 'SQL', icon: '🗄️', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
+  { name: 'HTML/CSS', icon: '🌐', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'Power BI', icon: '📊', color: 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-400' },
   { name: 'Firebase AI', icon: '🔥', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'Supabase', icon: '⚡', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
@@ -73,8 +88,10 @@ const techIcons = [
   { name: 'VS Code', icon: '💻', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
   { name: 'Pygame', icon: '🎮', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
   { name: 'NumPy', icon: '📈', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
-  { name: 'AI/ML', icon: '🤖', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
-  { name: 'Cloud', icon: '☁️', color: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400' }
+  { name: 'TensorFlow', icon: '🧠', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
+  { name: 'AI/ML', icon: '🤖', color: 'bg-pink-100 text-pink-600 dark:bg-pink-900/50 dark:text-pink-400' },
+  { name: 'Cloud', icon: '☁️', color: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400' },
+  { name: 'Photoshop', icon: '🎨', color: 'bg-pink-100 text-pink-600 dark:bg-pink-900/50 dark:text-pink-400' }
 ]
 
 export default function Skills() {
@@ -113,7 +130,7 @@ export default function Skills() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.1, y: -5 }}
-              className="flex flex-col items-center gap-3 p-4 glass dark:glass-dark rounded-xl hover:shadow-lg transition-all duration-300"
+              className="flex flex-col items-center gap-3 p-4 modern-card dark:modern-card-dark rounded-xl hover:shadow-3xl transition-all duration-500"
             >
               <div className={`text-3xl ${tech.color} w-16 h-16 rounded-full flex items-center justify-center`}>
                 {tech.icon}
@@ -134,7 +151,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="glass dark:glass-dark p-6 rounded-xl"
+              className="modern-card dark:modern-card-dark p-6 rounded-xl"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center">
@@ -177,6 +194,52 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
+
+        {/* Languages Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-dark-800 dark:text-white mb-4">
+              Languages
+            </h3>
+            <p className="text-dark-600 dark:text-dark-300">
+              Communication skills across multiple languages
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'Malayalam', level: 'Native', color: 'from-green-400 to-green-600' },
+              { name: 'English', level: 'Proficient', color: 'from-blue-400 to-blue-600' },
+              { name: 'Hindi', level: 'Advanced', color: 'from-orange-400 to-orange-600' },
+              { name: 'Tamil', level: 'Basic', color: 'from-purple-400 to-purple-600' }
+            ].map((language, index) => (
+              <motion.div
+                key={language.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="modern-card dark:modern-card-dark p-6 rounded-xl text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+                </div>
+                <h4 className="text-lg font-bold text-dark-800 dark:text-white mb-2">
+                  {language.name}
+                </h4>
+                <span className={`text-sm font-medium bg-gradient-to-r ${language.color} bg-clip-text text-transparent`}>
+                  {language.level}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

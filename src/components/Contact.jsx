@@ -65,9 +65,24 @@ export default function Contact() {
     setIsSubmitting(true)
     setSubmitStatus(null)
     
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      // Create email content
+      const emailContent = `
+Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}
+
+---
+This message was sent from your portfolio contact form.
+      `.trim()
+
+      // Open default email client with pre-filled content
+      const mailtoLink = `mailto:noufnoufiyanazeem@gmail.com?subject=Portfolio Contact - ${formData.name}&body=${encodeURIComponent(emailContent)}`
+      
+      // Open email client
+      window.open(mailtoLink, '_blank')
+      
+      // Show success message
       setSubmitStatus('success')
       setFormData({ name: '', email: '', message: '' })
       setErrors({})
@@ -213,7 +228,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="glass dark:glass-dark p-8 rounded-xl"
+            className="modern-card dark:modern-card-dark p-8 rounded-xl"
           >
             <h3 className="text-2xl font-bold text-dark-800 dark:text-white mb-6">
               Send Message
@@ -346,7 +361,7 @@ export default function Contact() {
                   >
                     <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
                     <p className="text-green-700 dark:text-green-300 font-medium">
-                      Message sent successfully! I'll get back to you soon.
+                      Email client opened! Your message will be sent to noufnoufiyanazeem@gmail.com
                     </p>
                   </motion.div>
                 )}

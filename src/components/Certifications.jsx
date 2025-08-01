@@ -8,7 +8,7 @@ const certifications = [
     title: 'Data Analytics',
     issuer: 'Codtech IT Solutions',
     year: '2024-2025',
-    image: '/api/placeholder/400/300',
+    pdfUrl: '/data analytics.pdf',
     credentialId: 'DATA-ANALYTICS-2024',
     description: 'Comprehensive data analytics certification covering data visualization, statistical analysis, and business intelligence tools.'
   },
@@ -17,7 +17,7 @@ const certifications = [
     title: 'SQL Certification Course: Basic to Advance',
     issuer: 'Geekster',
     year: '2024',
-    image: '/api/placeholder/400/300',
+    pdfUrl: '/sql.pdf',
     credentialId: 'SQL-GEEKSTER-2024',
     description: 'Complete SQL certification from basic concepts to advanced database management and optimization techniques.'
   },
@@ -26,7 +26,7 @@ const certifications = [
     title: 'Python Programming Fundamentals',
     issuer: 'Geekster',
     year: '2024',
-    image: '/api/placeholder/400/300',
+    pdfUrl: '/Python Programming fundamentals.pdf',
     credentialId: 'PYTHON-GEEKSTER-2024',
     description: 'Fundamental Python programming certification covering core concepts, data structures, and programming best practices.'
   },
@@ -35,7 +35,7 @@ const certifications = [
     title: 'Introduction to Simple Data Structures in Python',
     issuer: 'Codesignal',
     year: '2024',
-    image: '/api/placeholder/400/300',
+    pdfUrl: '/Introduction to simple data structures in python.pdf',
     credentialId: 'PYTHON-DS-CODESIGNAL-2024',
     description: 'Specialized certification in Python data structures including arrays, linked lists, stacks, queues, and trees.'
   }
@@ -81,24 +81,55 @@ export default function Certifications() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group glass dark:glass-dark rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="group modern-card dark:modern-card-dark rounded-xl overflow-hidden hover:shadow-3xl transition-all duration-500"
             >
-              {/* Certificate Image */}
-              <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-primary-600/20 flex items-center justify-center">
-                  <Award className="w-16 h-16 text-primary-600/30 dark:text-primary-400/30" />
-                </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={() => openModal(cert)}
-                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 w-12 h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white"
-                  >
-                    <Eye className="w-6 h-6 text-dark-700" />
-                  </motion.button>
-                </div>
-              </div>
+                             {/* Certificate Image */}
+               <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 overflow-hidden">
+                 <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-primary-600/20 flex items-center justify-center">
+                   {cert.id === 1 && (
+                     <div className="text-center">
+                       <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-2">
+                         <span className="text-white text-2xl font-bold">📊</span>
+                       </div>
+                       <p className="text-primary-600 dark:text-primary-400 text-xs font-medium">Data Analytics</p>
+                     </div>
+                   )}
+                   {cert.id === 2 && (
+                     <div className="text-center">
+                       <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-2">
+                         <span className="text-white text-2xl font-bold">🗄️</span>
+                       </div>
+                       <p className="text-primary-600 dark:text-primary-400 text-xs font-medium">SQL Database</p>
+                     </div>
+                   )}
+                   {cert.id === 3 && (
+                     <div className="text-center">
+                       <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-xl flex items-center justify-center mb-2">
+                         <span className="text-white text-2xl font-bold">🐍</span>
+                       </div>
+                       <p className="text-primary-600 dark:text-primary-400 text-xs font-medium">Python</p>
+                     </div>
+                   )}
+                   {cert.id === 4 && (
+                     <div className="text-center">
+                       <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-2">
+                         <span className="text-white text-2xl font-bold">📈</span>
+                       </div>
+                       <p className="text-primary-600 dark:text-primary-400 text-xs font-medium">Data Structures</p>
+                     </div>
+                   )}
+                 </div>
+                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                   <motion.button
+                     whileHover={{ scale: 1.1 }}
+                     whileTap={{ scale: 0.9 }}
+                     onClick={() => openModal(cert)}
+                     className="opacity-0 group-hover:opacity-100 transition-all duration-300 w-12 h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white"
+                   >
+                     <Eye className="w-6 h-6 text-dark-700" />
+                   </motion.button>
+                 </div>
+               </div>
 
               {/* Certificate Content */}
               <div className="p-6">
@@ -123,15 +154,29 @@ export default function Certifications() {
                   {cert.description}
                 </p>
                 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => openModal(cert)}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
-                >
-                  <Eye className="w-4 h-4" />
-                  View Certificate
-                </motion.button>
+                <div className="flex gap-2">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => openModal(cert)}
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+                  >
+                    <Eye className="w-4 h-4" />
+                    View Details
+                  </motion.button>
+                  <motion.a
+                    href={cert.pdfUrl}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center gap-2 px-4 py-2 glass dark:glass-dark text-dark-700 dark:text-white text-sm font-medium rounded-lg hover:bg-white/20 dark:hover:bg-dark-700/50 transition-colors duration-200"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    PDF
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -169,13 +214,37 @@ export default function Certifications() {
                   </motion.button>
                 </div>
 
-                {/* Modal Content */}
-                <div className="p-6">
-                  <div className="mb-6">
-                    <div className="h-64 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 rounded-lg flex items-center justify-center">
-                      <Award className="w-20 h-20 text-primary-600/30 dark:text-primary-400/30" />
-                    </div>
-                  </div>
+                                 {/* Modal Content */}
+                 <div className="p-6">
+                   <div className="mb-6">
+                     <div className="h-64 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 rounded-lg flex items-center justify-center">
+                       <div className="text-center">
+                         {selectedCert.id === 1 && (
+                           <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
+                             <span className="text-white text-4xl font-bold">📊</span>
+                           </div>
+                         )}
+                         {selectedCert.id === 2 && (
+                           <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
+                             <span className="text-white text-4xl font-bold">🗄️</span>
+                           </div>
+                         )}
+                         {selectedCert.id === 3 && (
+                           <div className="w-24 h-24 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
+                             <span className="text-white text-4xl font-bold">🐍</span>
+                           </div>
+                         )}
+                         {selectedCert.id === 4 && (
+                           <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4">
+                             <span className="text-white text-4xl font-bold">📈</span>
+                           </div>
+                         )}
+                         <p className="text-dark-600 dark:text-dark-300 text-sm">
+                           PDF Certificate Available
+                         </p>
+                       </div>
+                     </div>
+                   </div>
 
                   <div className="space-y-4">
                     <div>
@@ -219,14 +288,18 @@ export default function Certifications() {
                   >
                     Close
                   </motion.button>
-                  <motion.button
+                  <motion.a
+                    href={selectedCert.pdfUrl}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Verify Online
-                  </motion.button>
+                    Download PDF
+                  </motion.a>
                 </div>
               </motion.div>
             </motion.div>

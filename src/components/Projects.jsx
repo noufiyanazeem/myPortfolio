@@ -30,7 +30,7 @@ const projects = [
   {
     id: 3,
     title: 'Tourism Web Platform',
-    description: 'Designed, developed, and deployed a responsive tourism web platform featuring interactive UI cards, wishlist, cart, and booking functionalities. Integrated Pabbly\'s Whatsapp API to automate user confirmations for bookings via WhatsApp.',
+    description: 'Designed and developed a responsive tourism web platform featuring interactive UI cards, wishlist, cart, and booking functionalities. Integrated Pabbly\'s Whatsapp API to automate user confirmations for bookings via WhatsApp. Built with modern web technologies and AI integration.',
     image: '/api/placeholder/400/250',
     category: 'Web Development',
     tech: ['Next.js', 'Supabase', 'Pabbly API', 'Firebase AI Studio'],
@@ -117,32 +117,45 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="group glass dark:glass-dark rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="group modern-card dark:modern-card-dark rounded-xl overflow-hidden hover:shadow-3xl transition-all duration-500"
               >
                 {/* Project Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-primary-600/20 flex items-center justify-center">
-                    <div className="text-6xl font-bold text-primary-600/30 dark:text-primary-400/30">
-                      {project.title.charAt(0)}
-                    </div>
+                    {project.id === 1 && (
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">📊</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">HR Analytics</p>
+                      </div>
+                    )}
+                    {project.id === 2 && (
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">🎮</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">Game Development</p>
+                      </div>
+                    )}
+                    {project.id === 3 && (
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">🌐</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">Web Platform</p>
+                      </div>
+                    )}
                   </div>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 flex gap-4">
-                      <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        href={project.liveUrl}
-                        className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200"
-                      >
-                        <Eye className="w-5 h-5 text-dark-700" />
-                      </motion.a>
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <motion.a
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         href={project.githubUrl}
-                        className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200"
+                        className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200"
                       >
-                        <Github className="w-5 h-5 text-dark-700" />
+                        <Github className="w-6 h-6 text-dark-700" />
                       </motion.a>
                     </div>
                   </div>
@@ -187,24 +200,15 @@ export default function Projects() {
                   </div>
                   
                   {/* Project Links */}
-                  <div className="flex gap-3">
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      href={project.liveUrl}
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </motion.a>
+                  <div className="flex justify-center">
                     <motion.a
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       href={project.githubUrl}
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 glass dark:glass-dark text-dark-700 dark:text-white text-sm font-medium rounded-lg hover:bg-white/20 dark:hover:bg-dark-700/50 transition-colors duration-200"
+                      className="flex items-center justify-center gap-2 px-6 py-2 glass dark:glass-dark text-dark-700 dark:text-white text-sm font-medium rounded-lg hover:bg-white/20 dark:hover:bg-dark-700/50 transition-colors duration-200"
                     >
                       <Github className="w-4 h-4" />
-                      GitHub
+                      View on GitHub
                     </motion.a>
                   </div>
                 </div>

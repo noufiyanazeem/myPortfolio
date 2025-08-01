@@ -24,7 +24,7 @@ const education = [
     degree: 'B.Sc. Computer Science',
     institution: 'University Institute of Technology',
     university: 'University of Kerala',
-    location: 'Trivandrum',
+    location: 'Yeroor',
     period: '08/2017 - 08/2020',
     percentage: '70%',
     description: 'Foundation studies in computer science covering programming fundamentals, data structures, and computer architecture.',

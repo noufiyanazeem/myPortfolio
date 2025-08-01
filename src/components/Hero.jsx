@@ -11,23 +11,29 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700">
-        <div className="absolute inset-0 opacity-50" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      {/* Modern Animated Background */}
+      <div className="absolute inset-0 animated-bg opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/60 to-primary-50/80 dark:from-dark-900/90 dark:via-dark-800/80 dark:to-dark-700/90 backdrop-blur-sm">
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Modern Floating Elements */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-10 w-20 h-20 bg-primary-200/30 dark:bg-primary-800/30 rounded-full blur-xl"
+        animate={{ y: [0, -30, 0], rotate: [0, 180, 360] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-br from-primary-400/20 to-blue-500/20 rounded-full blur-xl neon-glow"
       />
       <motion.div
-        animate={{ y: [0, 20, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-20 right-10 w-32 h-32 bg-primary-300/20 dark:bg-primary-700/20 rounded-full blur-xl"
+        animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-xl neon-glow"
+      />
+      <motion.div
+        animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-lg neon-glow"
       />
 
       <div className="container-custom section-padding relative z-10">
@@ -39,18 +45,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <div className="relative inline-block">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white dark:border-dark-600 shadow-2xl mx-auto">
-                <img 
-                  src="/p.jpg" 
-                  alt="Noufiya Nazeem" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-2 -right-2 w-8 h-8 bg-primary-500 rounded-full"
+            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white/50 dark:border-dark-600/50 shadow-2xl mx-auto float neon-glow">
+              <img 
+                src="/p.jpg" 
+                alt="Noufiya Nazeem" 
+                className="w-full h-full object-cover"
               />
             </div>
           </motion.div>
@@ -97,7 +96,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 cursor-pointer"
+              className="btn-modern flex items-center gap-2 cursor-pointer"
             >
               <Download className="w-5 h-5" />
               Download Resume
@@ -106,7 +105,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToAbout}
-              className="px-8 py-3 glass dark:glass-dark text-dark-700 dark:text-white font-semibold rounded-full hover:bg-white/20 dark:hover:bg-dark-700/50 transition-all duration-300"
+              className="btn-glass"
             >
               Learn More
             </motion.button>
