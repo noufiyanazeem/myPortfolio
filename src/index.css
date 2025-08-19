@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Enhanced Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+  
+  .glass-dark {
+    @apply bg-dark-800/60 backdrop-blur-xl border border-dark-600/30 shadow-2xl;
+  }
+  
+  /* Modern Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  /* Neon Glow Effects */
+  .neon-glow {
+    @apply shadow-[0_0_20px_rgba(14,165,233,0.3)];
+  }
+  
+  .neon-glow-dark {
+    @apply shadow-[0_0_20px_rgba(14,165,233,0.2)];
+  }
+  
+  /* Modern Card Styles */
+  .modern-card {
+    @apply bg-gradient-to-br from-white/10 to-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500;
+  }
+  
+  .modern-card-dark {
+    @apply bg-gradient-to-br from-dark-800/60 to-dark-700/40 backdrop-blur-xl border border-dark-600/30 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500;
+  }
+  
+  /* Animated Background */
+  .animated-bg {
+    background: linear-gradient(-45deg, #0ea5e9, #3b82f6, #8b5cf6, #06b6d4);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Pulse Animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Modern Button Styles */
+  .btn-modern {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-glass {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 text-dark-700 dark:text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 transform hover:scale-105;
+  }
+  
+  /* Skill Bar Animation */
+  .skill-bar {
+    @apply bg-gradient-to-r from-primary-400 to-primary-600 rounded-full h-2 transition-all duration-1000 ease-out;
+  }
+  
+  /* Code Font for Technical Elements */
+  .code-font {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Custom Shadows */
+  .shadow-3xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Gradient Borders */
+  .gradient-border {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, #0ea5e9, #3b82f6) border-box;
+    border: 2px solid transparent;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulseGlow {
+  from { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+  to { box-shadow: 0 0 30px rgba(14, 165, 233, 0.6); }
+}
