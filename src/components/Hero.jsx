@@ -90,7 +90,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <motion.a
-              href="/NoufiyaNazeem.pdf"
+              href="/NoufiyaNazeemResume.pdf"
               download="NoufiyaNazeem-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"

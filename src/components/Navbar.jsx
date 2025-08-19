@@ -7,12 +7,12 @@ import { AnimatePresence } from 'framer-motion'
 const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Education', href: '#education' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Education', href: '#education' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Certifications', href: '#certifications' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact Me', href: '#contact' },
 ]
 
 export default function Navbar() {

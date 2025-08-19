@@ -68,7 +68,7 @@ export default function About() {
             </div>
             
             <motion.a
-              href="/NoufiyaNazeem.pdf"
+              href="/NoufiyaNazeemResume.pdf"
               download="NoufiyaNazeem-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"

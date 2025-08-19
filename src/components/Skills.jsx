@@ -32,6 +32,7 @@ const skillCategories = [
       { name: 'LLM Prompt Crafting', level: 85, color: 'from-pink-400 to-pink-600' },
       { name: 'Neural Networks (Basics)', level: 75, color: 'from-blue-500 to-blue-700' },
       { name: 'Data Modeling', level: 80, color: 'from-yellow-400 to-yellow-600' },
+      { name: 'Data Science', level: 85, color: 'from-teal-400 to-teal-600' },
       { name: 'Cloud Computing', level: 80, color: 'from-cyan-400 to-cyan-600' },
       { name: 'Power BI', level: 85, color: 'from-orange-400 to-orange-600' },
       { name: 'Data Cleaning & Transformation', level: 88, color: 'from-green-400 to-green-600' }
@@ -41,11 +42,19 @@ const skillCategories = [
     title: 'Frameworks & Libraries',
     icon: Zap,
     skills: [
+      { name: 'React', level: 88, color: 'from-cyan-400 to-cyan-600' },
       { name: 'Pygame', level: 80, color: 'from-blue-400 to-blue-600' },
       { name: 'Tkinter', level: 75, color: 'from-green-400 to-green-600' },
       { name: 'NumPy', level: 82, color: 'from-blue-500 to-blue-700' },
       { name: 'Scikit-Learn', level: 78, color: 'from-orange-400 to-orange-600' },
       { name: 'TensorFlow', level: 75, color: 'from-purple-400 to-purple-600' }
+    ]
+  },
+  {
+    title: 'Software Engineering & Processes',
+    icon: Shield,
+    skills: [
+      { name: 'SDLC', level: 85, color: 'from-indigo-400 to-indigo-600' }
     ]
   },
   {
@@ -81,6 +90,7 @@ const techIcons = [
   { name: 'SQL', icon: '🗄️', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
   { name: 'HTML/CSS', icon: '🌐', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'Power BI', icon: '📊', color: 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-400' },
+  { name: 'Data Science', icon: '🔬', color: 'bg-teal-100 text-teal-600 dark:bg-teal-900/50 dark:text-teal-400' },
   { name: 'Firebase AI', icon: '🔥', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'Supabase', icon: '⚡', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
   { name: 'Pabbly', icon: '🔗', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },

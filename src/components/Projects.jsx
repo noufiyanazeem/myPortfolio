@@ -1,7 +1,28 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github, Eye } from 'lucide-react'
+import { ExternalLink, Github } from 'lucide-react'
 
+// Helpers to sort projects by period end date ("Present" treated as current date)
+const parseMonthYear = (value) => {
+  if (!value) return new Date(0)
+  const [mm, yyyy] = value.split('/').map((t) => t.trim())
+  const month = parseInt(mm, 10)
+  const year = parseInt(yyyy, 10)
+  if (Number.isNaN(month) || Number.isNaN(year)) return new Date(0)
+  return new Date(year, month - 1, 1)
+}
+
+const getPeriodEndDate = (period) => {
+  if (!period || typeof period !== 'string') return new Date(0)
+  const parts = period.split('-').map((p) => p.trim())
+  const end = parts[1] || ''
+  if (end.toLowerCase().includes('present')) return new Date()
+  return parseMonthYear(end)
+}
+
+const sortProjectsByEndDateDesc = (list) => {
+  return [...list].sort((a, b) => getPeriodEndDate(b.period) - getPeriodEndDate(a.period))
+}
 const projects = [
   {
     id: 1,
@@ -34,10 +55,10 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'Web Development',
     tech: ['Next.js', 'Supabase', 'Pabbly API', 'Firebase AI Studio'],
-    liveUrl: '#',
+    liveUrl: 'https://dubai-horizon-v3.vercel.app/',
     githubUrl: '#',
     featured: true,
-    period: '04/2023 - Present'
+    period: '06/2023 - Present'
   }
 ]
 
@@ -45,15 +66,14 @@ const categories = ['All', 'Data Analytics', 'Game Development', 'Web Developmen
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
-  const [filteredProjects, setFilteredProjects] = useState(projects)
+  const [filteredProjects, setFilteredProjects] = useState(sortProjectsByEndDateDesc(projects))
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category)
-    if (category === 'All') {
-      setFilteredProjects(projects)
-    } else {
-      setFilteredProjects(projects.filter(project => project.category === category))
-    }
+    const next = category === 'All'
+      ? projects
+      : projects.filter((project) => project.category === category)
+    setFilteredProjects(sortProjectsByEndDateDesc(next))
   }
 
   return (
@@ -200,7 +220,20 @@ export default function Projects() {
                   </div>
                   
                   {/* Project Links */}
-                  <div className="flex justify-center">
+                  <div className="flex justify-center gap-3">
+                    {project.liveUrl && project.liveUrl !== '#' && (
+                      <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </motion.a>
+                    )}
                     <motion.a
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

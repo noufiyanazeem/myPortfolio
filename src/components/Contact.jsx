@@ -209,7 +209,7 @@ This message was sent from your portfolio contact form.
                 <div>
                   <p className="text-sm text-dark-500 dark:text-dark-400">Resume</p>
                   <a 
-                    href="/NoufiyaNazeem.pdf" 
+                    href="/NoufiyaNazeemResume.pdf" 
                     download="NoufiyaNazeem-Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"

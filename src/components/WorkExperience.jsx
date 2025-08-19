@@ -7,7 +7,7 @@ const workExperience = [
     title: 'AI & Digital Solutions Associate Engineer',
     company: 'Self-Employed',
     location: 'Dubai, UAE',
-    period: '04/2023 - Present',
+    period: '06/2023 - Present',
     type: 'Freelancer | Remote',
     description: 'Self-driven AI Web Developer with practical experience in building real-time web platforms and intelligent automation tools.',
     achievements: [
@@ -16,9 +16,9 @@ const workExperience = [
       'Built the frontend entirely using Firebase AI Studio with Next.js, and managed the backend using Supabase for authentication, data storage, and booking management',
       'Utilized AI tools like Cursor AI, Firebase AI Studio, ChatGPT, and Gemini to accelerate development, streamline debugging, and assist in code generation',
       'Version-controlled the project using Git for structured and maintainable development',
-      'Handled branding and design work, creating all visual assets in Adobe Photoshop, including logos, business cards, and UI visuals'
+      'Handled branding and design work, creating all visual assets including logos, business cards, and UI visuals'
     ],
-    tools: ['Next.js', 'Supabase', 'Pabbly (Whatsapp API)', 'Cursor AI', 'Firebase AI Studio', 'ChatGPT', 'Gemini', 'Git', 'Adobe Photoshop'],
+    tools: ['Next.js', 'Supabase', 'Pabbly (Whatsapp API)', 'Cursor AI', 'Firebase AI Studio', 'ChatGPT', 'Gemini', 'Git'],
     featured: true
   },
   {
