@@ -58,7 +58,7 @@ const projects = [
     liveUrl: 'https://dubai-horizon-v3.vercel.app/',
     githubUrl: '#',
     featured: true,
-    period: '06/2023 - Present'
+    period: '04/2025 - Present'
   }
 ]
 
