@@ -19,6 +19,8 @@ const skillCategories = [
     skills: [
       { name: 'Python', level: 90, color: 'from-blue-400 to-blue-600' },
       { name: 'SQL', level: 85, color: 'from-green-400 to-green-600' },
+      { name: 'PL/SQL', level: 80, color: 'from-green-500 to-green-700' },
+      { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-yellow-600' },
       { name: 'HTML', level: 85, color: 'from-orange-500 to-orange-700' },
       { name: 'CSS', level: 85, color: 'from-blue-500 to-blue-700' }
     ]
@@ -29,25 +31,29 @@ const skillCategories = [
     skills: [
       { name: 'AI & Chatbot Technologies', level: 88, color: 'from-purple-400 to-purple-600' },
       { name: 'Machine Learning', level: 82, color: 'from-green-500 to-green-700' },
-      { name: 'LLM Prompt Crafting', level: 85, color: 'from-pink-400 to-pink-600' },
-      { name: 'Neural Networks (Basics)', level: 75, color: 'from-blue-500 to-blue-700' },
-      { name: 'Data Modeling', level: 80, color: 'from-yellow-400 to-yellow-600' },
+      { name: 'LLM Prompt Engineering', level: 85, color: 'from-pink-400 to-pink-600' },
+      { name: 'RAG Pipelines', level: 80, color: 'from-indigo-400 to-indigo-600' },
+      { name: 'Vector Databases', level: 75, color: 'from-violet-400 to-violet-600' },
+      { name: 'Hugging Face', level: 82, color: 'from-yellow-400 to-yellow-600' },
+      { name: 'OpenAI GPT', level: 80, color: 'from-green-400 to-green-600' },
+      { name: 'Google Gemini', level: 85, color: 'from-blue-400 to-blue-600' },
+      { name: 'Claude', level: 75, color: 'from-orange-400 to-orange-600' },
       { name: 'Data Science', level: 85, color: 'from-teal-400 to-teal-600' },
-      { name: 'Cloud Computing', level: 80, color: 'from-cyan-400 to-cyan-600' },
-      { name: 'Power BI', level: 85, color: 'from-orange-400 to-orange-600' },
-      { name: 'Data Cleaning & Transformation', level: 88, color: 'from-green-400 to-green-600' }
+      { name: 'Data Analytics & Visualization', level: 88, color: 'from-pink-500 to-pink-700' },
+      { name: 'Power BI', level: 85, color: 'from-orange-400 to-orange-600' }
     ]
   },
   {
     title: 'Frameworks & Libraries',
     icon: Zap,
     skills: [
-      { name: 'React', level: 88, color: 'from-cyan-400 to-cyan-600' },
+      { name: 'React.js', level: 88, color: 'from-cyan-400 to-cyan-600' },
+      { name: 'Next.js', level: 85, color: 'from-gray-400 to-gray-600' },
       { name: 'Pygame', level: 80, color: 'from-blue-400 to-blue-600' },
       { name: 'Tkinter', level: 75, color: 'from-green-400 to-green-600' },
-      { name: 'NumPy', level: 82, color: 'from-blue-500 to-blue-700' },
-      { name: 'Scikit-Learn', level: 78, color: 'from-orange-400 to-orange-600' },
-      { name: 'TensorFlow', level: 75, color: 'from-purple-400 to-purple-600' }
+      { name: 'LangChain', level: 80, color: 'from-purple-400 to-purple-600' },
+      { name: 'LlamaIndex', level: 75, color: 'from-orange-400 to-orange-600' },
+      { name: 'PyPDF2', level: 85, color: 'from-red-400 to-red-600' }
     ]
   },
   {
@@ -62,13 +68,13 @@ const skillCategories = [
     icon: Database,
     skills: [
       { name: 'Supabase', level: 88, color: 'from-green-400 to-green-600' },
-      { name: 'MySQL', level: 85, color: 'from-blue-500 to-blue-700' },
-      { name: 'Git', level: 90, color: 'from-orange-500 to-orange-700' },
+      { name: 'PostgreSQL', level: 85, color: 'from-blue-500 to-blue-700' },
+      { name: 'MySQL', level: 85, color: 'from-blue-600 to-blue-800' },
+      { name: 'Oracle', level: 75, color: 'from-red-400 to-red-600' },
+      { name: 'Git/GitHub', level: 90, color: 'from-orange-500 to-orange-700' },
       { name: 'Visual Studio Code', level: 95, color: 'from-blue-400 to-blue-600' },
-      { name: 'Eclipse', level: 80, color: 'from-purple-400 to-purple-600' },
-      { name: 'PyCharm', level: 85, color: 'from-green-500 to-green-700' },
-      { name: 'MS Office', level: 85, color: 'from-red-400 to-red-600' },
-      { name: 'Adobe Photoshop', level: 75, color: 'from-pink-400 to-pink-600' }
+      { name: 'Excel', level: 85, color: 'from-green-500 to-green-700' },
+      { name: 'Webhooks', level: 80, color: 'from-purple-400 to-purple-600' }
     ]
   },
   {
@@ -78,30 +84,35 @@ const skillCategories = [
       { name: 'Firebase AI Studio', level: 90, color: 'from-orange-400 to-orange-600' },
       { name: 'Supabase', level: 88, color: 'from-green-500 to-green-700' },
       { name: 'Cursor AI', level: 85, color: 'from-blue-400 to-blue-600' },
-      { name: 'Trae AI', level: 80, color: 'from-purple-400 to-purple-600' },
       { name: 'Google AI Studio', level: 82, color: 'from-yellow-400 to-yellow-600' },
-      { name: 'Pabbly', level: 85, color: 'from-red-400 to-red-600' }
+      { name: 'Pabbly API', level: 85, color: 'from-red-400 to-red-600' },
+      { name: 'Zapier', level: 80, color: 'from-orange-500 to-orange-700' },
+      { name: 'n8n', level: 75, color: 'from-purple-400 to-purple-600' },
+      { name: 'Shopify', level: 80, color: 'from-green-400 to-green-600' },
+      { name: 'Vercel', level: 85, color: 'from-black to-gray-600' },
+      { name: 'Anaconda', level: 80, color: 'from-green-600 to-green-800' },
+      { name: 'AWS', level: 75, color: 'from-orange-400 to-orange-600' }
     ]
   }
 ]
 
 const techIcons = [
   { name: 'Python', icon: '🐍', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
+  { name: 'JavaScript', icon: '📜', color: 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-400' },
   { name: 'SQL', icon: '🗄️', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'HTML/CSS', icon: '🌐', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
+  { name: 'React', icon: '⚛️', color: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400' },
+  { name: 'Next.js', icon: '▲', color: 'bg-gray-100 text-gray-600 dark:bg-gray-900/50 dark:text-gray-400' },
   { name: 'Power BI', icon: '📊', color: 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-400' },
-  { name: 'Data Science', icon: '🔬', color: 'bg-teal-100 text-teal-600 dark:bg-teal-900/50 dark:text-teal-400' },
+  { name: 'LangChain', icon: '🔗', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
+  { name: 'Hugging Face', icon: '🤗', color: 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-400' },
   { name: 'Firebase AI', icon: '🔥', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'Supabase', icon: '⚡', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'Pabbly', icon: '🔗', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
+  { name: 'Gemini', icon: '💎', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
   { name: 'Git', icon: '📝', color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-400' },
   { name: 'VS Code', icon: '💻', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
   { name: 'Pygame', icon: '🎮', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
-  { name: 'NumPy', icon: '📈', color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400' },
-  { name: 'TensorFlow', icon: '🧠', color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400' },
-  { name: 'AI/ML', icon: '🤖', color: 'bg-pink-100 text-pink-600 dark:bg-pink-900/50 dark:text-pink-400' },
-  { name: 'Cloud', icon: '☁️', color: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/50 dark:text-cyan-400' },
-  { name: 'Photoshop', icon: '🎨', color: 'bg-pink-100 text-pink-600 dark:bg-pink-900/50 dark:text-pink-400' }
+  { name: 'Shopify', icon: '🛒', color: 'bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-400' },
+  { name: 'Vercel', icon: '▲', color: 'bg-black text-white dark:bg-gray-800 dark:text-gray-200' }
 ]
 
 export default function Skills() {

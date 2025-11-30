@@ -50,20 +50,22 @@ export default function About() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-dark-800 dark:text-white mb-6">
-              Self-driven AI Web Developer & IT Support Analyst
+              AI & Automation Development Specialist
             </h3>
             <div className="space-y-4 text-dark-600 dark:text-dark-300 text-lg leading-relaxed">
               <p>
-                I'm a self-driven AI Web Developer and former IT Support Analyst with practical experience in building real-time web platforms 
-                and intelligent automation tools. My expertise spans across Firebase AI Studio, Supabase, and Pabbly.
+                Analytical and detail-oriented AI & Automation Development with hands-on experience in developing AI-powered web platforms, 
+                automation tools, and data-driven dashboards. Skilled in Python, SQL, PL/SQL, JavaScript, and API integration, with strong 
+                knowledge of ML concepts, LLM prompt engineering, Low-code/no-code Platform and AI workflow automation.
               </p>
               <p>
-                I specialize in full product development—from clean, scalable code and responsive UI/UX design to seamless AI integration. 
-                I combine technical precision with a creative edge in graphic design to craft user-centric, visually compelling web applications.
+                Passionate about designing intelligent systems that bridge data, analytics, and user experience. I specialize in full product 
+                development—from clean, scalable code and responsive UI/UX design to seamless AI integration including RAG pipelines, vector 
+                databases, and LLM implementations.
               </p>
               <p>
                 With experience in both development and IT support, I bring a unique perspective to problem-solving and user experience design. 
-                I'm passionate about leveraging AI tools to accelerate development and create innovative solutions.
+                I'm passionate about leveraging AI tools to accelerate development and create innovative solutions that drive business value.
               </p>
             </div>
             

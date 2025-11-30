@@ -4,21 +4,25 @@ import { Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react'
 const workExperience = [
   {
     id: 1,
-    title: 'AI & Digital Solutions Associate Engineer',
+    title: 'Freelance Full Stack Developer',
     company: 'Self-Employed',
     location: 'Dubai, UAE',
-    period: '06/2023 - Present',
+    period: '06/2023 - 10/2025',
     type: 'Freelancer | Remote',
-    description: 'Self-driven AI Web Developer with practical experience in building real-time web platforms and intelligent automation tools.',
+    description: 'Analytical and detail-oriented AI & Automation Developer with hands-on experience in developing AI-powered web platforms, automation tools, and data-driven dashboards. Skilled in Python, SQL, PL/SQL, JavaScript, and API integration, with strong knowledge of ML concepts, LLM prompt engineering, Low-code/no-code Platform and AI workflow automation.',
     achievements: [
-      'Designed, developed, and deployed a responsive tourism web platform featuring interactive UI cards, wishlist, cart, and booking functionalities',
-      'Integrated Pabbly\'s Whatsapp API to automate user confirmations for bookings via WhatsApp',
-      'Built the frontend entirely using Firebase AI Studio with Next.js, and managed the backend using Supabase for authentication, data storage, and booking management',
-      'Utilized AI tools like Cursor AI, Firebase AI Studio, ChatGPT, and Gemini to accelerate development, streamline debugging, and assist in code generation',
-      'Version-controlled the project using Git for structured and maintainable development',
-      'Handled branding and design work, creating all visual assets including logos, business cards, and UI visuals'
+      'Hands-on experience building AI/LLM applications, including RAG systems, intelligent chatbots, and ATS-style resume analysis tools',
+      'Strong proficiency in Python, Flask, Next.js, Supabase, and Streamlit, with end-to-end full-stack development experience',
+      'Skilled in vector databases, FAISS, embeddings, Hugging Face Transformers, and Google Gemini models for advanced AI-driven workflows',
+      'Implemented automation workflows using WhatsApp API, Supabase triggers, and real-time dashboards for seamless user interactions',
+      'Developed a full responsive tourism web platform with interactive cards, wishlist, cart, and booking modules using Firebase AI Studio + Next.js',
+      'Integrated Pabbly WhatsApp API for automated booking confirmations and managed the backend with Supabase authentication, storage, and booking management',
+      'Leveraged AI tools such as Cursor AI, Firebase AI Studio, ChatGPT, and Gemini to accelerate development, debugging, and code generation',
+      'Experienced in data analytics (Power BI) and building production-ready dashboards and insight systems',
+      'Strong background in UI/UX and branding, creating logos, business cards, and platform visuals',
+      'Followed modern development practices with Git-based version control for structured and maintainable delivery'
     ],
-    tools: ['Next.js', 'Supabase', 'Pabbly (Whatsapp API)', 'Cursor AI', 'Firebase AI Studio', 'ChatGPT', 'Gemini', 'Git'],
+    tools: ['Python', 'Flask', 'Next.js', 'Supabase', 'Streamlit', 'FAISS', 'Hugging Face', 'Google Gemini', 'Vector Databases', 'WhatsApp API', 'Pabbly API', 'Firebase AI Studio', 'Cursor AI', 'ChatGPT', 'Power BI', 'Git'],
     featured: true
   },
   {

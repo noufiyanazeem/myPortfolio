@@ -8,7 +8,7 @@ const education = [
     institution: 'Mar Thoma Institute of Information Technology',
     university: 'University of Kerala',
     location: 'Ayur',
-    period: '01/2022 - 08/2024',
+    period: '07/2022 - 09/2024',
     percentage: '76%',
     description: 'Advanced studies in computer applications with focus on software development, database management, and system analysis.',
     achievements: [
@@ -25,7 +25,7 @@ const education = [
     institution: 'University Institute of Technology',
     university: 'University of Kerala',
     location: 'Yeroor',
-    period: '08/2017 - 08/2020',
+    period: '06/2017 - 06/2020',
     percentage: '70%',
     description: 'Foundation studies in computer science covering programming fundamentals, data structures, and computer architecture.',
     achievements: [

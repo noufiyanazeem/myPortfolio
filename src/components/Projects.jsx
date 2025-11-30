@@ -26,43 +26,91 @@ const sortProjectsByEndDateDesc = (list) => {
 const projects = [
   {
     id: 1,
+    title: 'Hugging Face RAG Document QA',
+    description: 'Built a full-stack AI Q&A system for querying PDFs using embeddings and LLMs. Backend: Python, Flask, PyPDF2, FAISS, sentence-transformers for PDF ingestion, text chunking, and vector search. Frontend: Next.js for PDF upload, document selection, question submission, and real-time answer display. Integrated Hugging Face Transformers QA pipeline for AI-powered answers.',
+    image: '/api/placeholder/400/250',
+    category: 'AI & ML',
+    tech: ['Python', 'Flask', 'FAISS', 'Hugging Face', 'Next.js', 'PyPDF2', 'Vector Search'],
+    liveUrl: '#',
+    githubUrl: '#',
+    featured: true,
+    period: '01/2025 - Present'
+  },
+  {
+    id: 2,
+    title: 'AI-Powered ATS Resume Analyzer',
+    description: 'Built an ATS-powered resume analysis system using Google Gemini LLM, Streamlit, and Python. Integrated Google AI Studio API key authentication and securely managed environment variables using .env. Used Gemini 2.x models to evaluate resumes and generate structured JSON outputs. Implemented PDF text extraction using PyPDF2 and automated job description comparison. Designed a clean, user-friendly Streamlit web interface for uploading resumes and viewing AI-generated insights.',
+    image: '/api/placeholder/400/250',
+    category: 'AI & ML',
+    tech: ['Google Gemini LLM', 'Streamlit', 'Python', 'PyPDF2', 'Google AI Studio'],
+    liveUrl: '#',
+    githubUrl: '#',
+    featured: true,
+    period: '01/2025 - Present'
+  },
+  {
+    id: 3,
+    title: 'AI Customer Support Chatbot',
+    description: 'Built an AI chatbot using Hugging Face Transformers for intent detection and response. Stored conversation history in Supabase for seamless user experience. Deployed via web interface for interactive Q&A sessions with intelligent response generation.',
+    image: '/api/placeholder/400/250',
+    category: 'AI & ML',
+    tech: ['Hugging Face', 'Supabase', 'Next.js', 'Transformers'],
+    liveUrl: '#',
+    githubUrl: '#',
+    featured: true,
+    period: '01/2025 - Present'
+  },
+  {
+    id: 4,
+    title: 'AI-Powered Web Automation - Tourism Platform',
+    description: 'Designed, developed, and deployed a responsive tourism web platform featuring interactive UI cards, wishlist, cart, and booking functionalities. Integrated Pabbly\'s WhatsApp API to automate user confirmations for bookings via WhatsApp, cutting manual admin effort by 60%. Built the frontend entirely using Firebase AI Studio with Next.js, and managed the backend using Supabase for authentication, data storage, and booking management. Utilized AI tools like Cursor AI, Firebase AI Studio, ChatGPT, and Gemini to accelerate development, streamline debugging, and assist in code generation. Version-controlled using Git for structured and maintainable development. Handled branding and design work, creating all visual assets including logos, business cards, and UI visuals.',
+    image: '/api/placeholder/400/250',
+    category: 'Web Development',
+    tech: ['Next.js', 'Supabase', 'Firebase AI Studio', 'WhatsApp API', 'Pabbly API', 'Git', 'Cursor AI', 'ChatGPT', 'Gemini'],
+    liveUrl: 'https://dubai-horizon-v3.vercel.app/',
+    githubUrl: '#',
+    featured: true,
+    period: '04/2025 - Present'
+  },
+  {
+    id: 5,
     title: 'HR Analytics Dashboard',
-    description: 'Designed and developed a fully interactive HR Analytics Dashboard to visualize and analyze key human resource metrics, providing insights into attrition, employee demographics, and workforce structure. Tracked and visualized employee records with real-time KPIs such as Attrition Count and Rate, Average Age, Salary, and Tenure.',
+    description: 'Built an interactive HR dashboard visualizing attrition, tenure, and demographics. Applied data modelling and DAX to compute real-time KPIs such as attrition rate and average salary. Enhanced HR decision-making through data-driven insights and visual storytelling.',
     image: '/api/placeholder/400/250',
     category: 'Data Analytics',
     tech: ['Power BI', 'Excel', 'Data Modeling', 'DAX Measures'],
     liveUrl: '#',
     githubUrl: '#',
     featured: true,
-    period: '01/2024 - 03/2025'
+    period: '11/2024 - 03/2025'
   },
   {
-    id: 2,
-    title: 'Two Player Games',
-    description: 'Two-Player Games is an interactive and dynamic collection of classic two-player games implemented in the Python programming language. The primary aim is to provide users with an engaging and enjoyable gaming experience while demonstrating the versatility and power of Python in game development.',
+    id: 6,
+    title: 'Two-Player Games Suite',
+    description: 'Designed a Python-based multi-game app with scoreboard, sound, and offline mode, achieving 20+ installs in the first month. Interactive and dynamic collection of classic two-player games implemented in Python.',
     image: '/api/placeholder/400/250',
     category: 'Game Development',
-    tech: ['Python', 'Pygame Library', 'Game Development'],
+    tech: ['Python', 'Pygame', 'Game Development'],
     liveUrl: '#',
     githubUrl: '#',
-    featured: true,
-    period: '04/2024 - 08/2024'
+    featured: false,
+    period: '04/2024 - 09/2024'
   },
   {
-    id: 3,
-    title: 'Tourism Web Platform',
-    description: 'Designed and developed a responsive tourism web platform featuring interactive UI cards, wishlist, cart, and booking functionalities. Integrated Pabbly\'s Whatsapp API to automate user confirmations for bookings via WhatsApp. Built with modern web technologies and AI integration.',
+    id: 7,
+    title: 'AI-Powered Shopify Store Builder',
+    description: 'Built AI-optimized e-commerce stores with smart product recommendations, variant management, and secure payments. Leveraged Shopify Liquid templates and AI tools for enhanced shopping experience.',
     image: '/api/placeholder/400/250',
-    category: 'Web Development',
-    tech: ['Next.js', 'Supabase', 'Pabbly API', 'Firebase AI Studio'],
-    liveUrl: 'https://dubai-horizon-v3.vercel.app/',
+    category: 'E-Commerce',
+    tech: ['Shopify', 'Liquid', 'AI Integration'],
+    liveUrl: '#',
     githubUrl: '#',
-    featured: true,
-    period: '04/2025 - Present'
+    featured: false,
+    period: '06/2023 - 12/2024'
   }
 ]
 
-const categories = ['All', 'Data Analytics', 'Game Development', 'Web Development']
+const categories = ['All', 'AI & ML', 'Web Development', 'Data Analytics', 'Game Development', 'E-Commerce']
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
@@ -144,26 +192,58 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-primary-600/20 flex items-center justify-center">
                     {project.id === 1 && (
                       <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">🤖</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">RAG System</p>
+                      </div>
+                    )}
+                    {project.id === 2 && (
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">📄</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">ATS Analyzer</p>
+                      </div>
+                    )}
+                    {project.id === 3 && (
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">💬</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">AI Chatbot</p>
+                      </div>
+                    )}
+                    {project.id === 4 && (
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">🌐</span>
+                        </div>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">Web Platform</p>
+                      </div>
+                    )}
+                    {project.id === 5 && (
+                      <div className="text-center">
                         <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-3">
                           <span className="text-white text-3xl font-bold">📊</span>
                         </div>
                         <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">HR Analytics</p>
                       </div>
                     )}
-                    {project.id === 2 && (
+                    {project.id === 6 && (
                       <div className="text-center">
                         <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-3">
                           <span className="text-white text-3xl font-bold">🎮</span>
                         </div>
-                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">Game Development</p>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">Game Suite</p>
                       </div>
                     )}
-                    {project.id === 3 && (
+                    {project.id === 7 && (
                       <div className="text-center">
-                        <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-3">
-                          <span className="text-white text-3xl font-bold">🌐</span>
+                        <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mb-3">
+                          <span className="text-white text-3xl font-bold">🛒</span>
                         </div>
-                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">Web Platform</p>
+                        <p className="text-primary-600 dark:text-primary-400 text-sm font-medium">E-Commerce</p>
                       </div>
                     )}
                   </div>

@@ -7,16 +7,16 @@ const certifications = [
     id: 1,
     title: 'Data Analytics',
     issuer: 'Codtech IT Solutions',
-    year: '2024-2025',
+    year: '01/2025',
     pdfUrl: '/data analytics.pdf',
-    credentialId: 'DATA-ANALYTICS-2024',
+    credentialId: 'DATA-ANALYTICS-2025',
     description: 'Comprehensive data analytics certification covering data visualization, statistical analysis, and business intelligence tools.'
   },
   {
     id: 2,
-    title: 'SQL Certification Course: Basic to Advance',
+    title: 'SQL Certification: Basic to Advance',
     issuer: 'Geekster',
-    year: '2024',
+    year: '08/2024', 
     pdfUrl: '/sql.pdf',
     credentialId: 'SQL-GEEKSTER-2024',
     description: 'Complete SQL certification from basic concepts to advanced database management and optimization techniques.'
@@ -25,16 +25,16 @@ const certifications = [
     id: 3,
     title: 'Python Programming Fundamentals',
     issuer: 'Geekster',
-    year: '2024',
+    year: '08/2024',
     pdfUrl: '/Python Programming fundamentals.pdf',
     credentialId: 'PYTHON-GEEKSTER-2024',
     description: 'Fundamental Python programming certification covering core concepts, data structures, and programming best practices.'
   },
   {
     id: 4,
-    title: 'Introduction to Simple Data Structures in Python',
-    issuer: 'Codesignal',
-    year: '2024',
+    title: 'Introduction to Data Structures in Python',
+    issuer: 'CodeSignal',
+    year: '08/2024',
     pdfUrl: '/Introduction to simple data structures in python.pdf',
     credentialId: 'PYTHON-DS-CODESIGNAL-2024',
     description: 'Specialized certification in Python data structures including arrays, linked lists, stacks, queues, and trees.'
