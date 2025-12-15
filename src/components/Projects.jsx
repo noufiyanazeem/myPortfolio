@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 
 // Helpers to sort projects by period end date ("Present" treated as current date)
 const parseMonthYear = (value) => {
   if (!value) return new Date(0)
+  if (!value.includes('/')) {
+    const year = parseInt(value, 10)
+    return Number.isNaN(year) ? new Date(0) : new Date(year, 0, 1)
+  }
   const [mm, yyyy] = value.split('/').map((t) => t.trim())
   const month = parseInt(mm, 10)
   const year = parseInt(yyyy, 10)
@@ -14,6 +18,9 @@ const parseMonthYear = (value) => {
 
 const getPeriodEndDate = (period) => {
   if (!period || typeof period !== 'string') return new Date(0)
+  if (!period.includes('-') && !period.toLowerCase().includes('present')) {
+    return parseMonthYear(period)
+  }
   const parts = period.split('-').map((p) => p.trim())
   const end = parts[1] || ''
   if (end.toLowerCase().includes('present')) return new Date()
@@ -32,9 +39,9 @@ const projects = [
     category: 'AI & ML',
     tech: ['Python', 'Flask', 'FAISS', 'Hugging Face', 'Next.js', 'PyPDF2', 'Vector Search'],
     liveUrl: '#',
-    githubUrl: '#',
+    // githubUrl: '#',
     featured: true,
-    period: '01/2025 - Present'
+    period: '2025'
   },
   {
     id: 2,
@@ -44,21 +51,21 @@ const projects = [
     category: 'AI & ML',
     tech: ['Google Gemini LLM', 'Streamlit', 'Python', 'PyPDF2', 'Google AI Studio'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/noufiyanazeem/atstrackingsystem',
     featured: true,
-    period: '01/2025 - Present'
+    period: '2025'
   },
   {
     id: 3,
     title: 'AI Customer Support Chatbot',
-    description: 'Built an AI chatbot using Hugging Face Transformers for intent detection and response. Stored conversation history in Supabase for seamless user experience. Deployed via web interface for interactive Q&A sessions with intelligent response generation.',
+    description: 'Built a real-time AI chatbot using Groq’s LLaMA 3.1 model for fast and accurate natural-language answers. Developed a chat API using Next.js App Router, delivering multi-turn conversations without predefined rules. Stored user queries and chatbot responses in Supabase for analytics and conversation history. Designed a modern UI using Tailwind CSS with seamless message streaming and error handling. Supports general knowledge queries, math, and customer support FAQs with high accuracy.',
     image: '/api/placeholder/400/250',
     category: 'AI & ML',
-    tech: ['Hugging Face', 'Supabase', 'Next.js', 'Transformers'],
+    tech: ['Groq LLaMA 3.1', 'Supabase', 'Next.js', 'Tailwind CSS'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/noufiyanazeem/aicustomerchatbot',
     featured: true,
-    period: '01/2025 - Present'
+    period: '2025'
   },
   {
     id: 4,
@@ -70,7 +77,7 @@ const projects = [
     liveUrl: 'https://dubai-horizon-v3.vercel.app/',
     githubUrl: '#',
     featured: true,
-    period: '04/2025 - Present'
+    period: '2025'
   },
   {
     id: 5,
@@ -79,10 +86,10 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'Data Analytics',
     tech: ['Power BI', 'Excel', 'Data Modeling', 'DAX Measures'],
-    liveUrl: '#',
-    githubUrl: '#',
+    // liveUrl: '#',
+    // githubUrl: '#',
     featured: true,
-    period: '11/2024 - 03/2025'
+    period: '2024'
   },
   {
     id: 6,
@@ -92,9 +99,9 @@ const projects = [
     category: 'Game Development',
     tech: ['Python', 'Pygame', 'Game Development'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/noufiyanazeem/TwoPlayerGame',
     featured: false,
-    period: '04/2024 - 09/2024'
+    period: '2024'
   },
   {
     id: 7,
@@ -103,10 +110,10 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'E-Commerce',
     tech: ['Shopify', 'Liquid', 'AI Integration'],
-    liveUrl: '#',
-    githubUrl: '#',
+    // liveUrl: '#',
+    // githubUrl: '#',
     featured: false,
-    period: '06/2023 - 12/2024'
+    period: '2023 - 2024'
   }
 ]
 
@@ -157,11 +164,10 @@ export default function Projects() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleCategoryChange(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'glass dark:glass-dark text-dark-700 dark:text-white hover:bg-white/20 dark:hover:bg-dark-700/50'
-              }`}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === category
+                ? 'bg-primary-600 text-white shadow-lg'
+                : 'glass dark:glass-dark text-dark-700 dark:text-white hover:bg-white/20 dark:hover:bg-dark-700/50'
+                }`}
             >
               {category}
             </motion.button>
@@ -248,16 +254,7 @@ export default function Projects() {
                     )}
                   </div>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-                      <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        href={project.githubUrl}
-                        className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200"
-                      >
-                        <Github className="w-6 h-6 text-dark-700" />
-                      </motion.a>
-                    </div>
+
                   </div>
                 </div>
 
@@ -278,15 +275,15 @@ export default function Projects() {
                       </span>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-dark-800 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-dark-600 dark:text-dark-300 mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
@@ -298,7 +295,7 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  
+
                   {/* Project Links */}
                   <div className="flex justify-center gap-3">
                     {project.liveUrl && project.liveUrl !== '#' && (
@@ -314,15 +311,7 @@ export default function Projects() {
                         Live Demo
                       </motion.a>
                     )}
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      href={project.githubUrl}
-                      className="flex items-center justify-center gap-2 px-6 py-2 glass dark:glass-dark text-dark-700 dark:text-white text-sm font-medium rounded-lg hover:bg-white/20 dark:hover:bg-dark-700/50 transition-colors duration-200"
-                    >
-                      <Github className="w-4 h-4" />
-                      View on GitHub
-                    </motion.a>
+
                   </div>
                 </div>
               </motion.div>
